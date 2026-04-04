@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recuperar Senha – Viva Conectado</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #f0f4f8, #e2e8f0);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #1f2933;
+        }
+
+        .recuperar-container {
+            width: 100%;
+            max-width: 420px;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            text-align: center;
+        }
+
+        .recuperar-container img {
+            width: 140px;
+            margin-bottom: 20px;
+        }
+
+        .recuperar-container h2 {
+            font-size: 28px;
+            color: #1f2933;
+            margin-bottom: 15px;
+        }
+
+        .recuperar-container p {
+            font-size: 16px;
+            color: #4b5563;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            color: #111827;
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .btn-recuperar {
+            width: 100%;
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 14px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-recuperar:hover {
+            background: #1e4fd6;
+        }
+
+        .voltar {
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .voltar a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .voltar a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="recuperar-container">
+        <img src="img/Logo_Preto.png" alt="Viva Conectado">
+
+        <h2>Esqueci minha senha</h2>
+        <p>Informe o e-mail cadastrado. Você receberá instruções para criar uma nova senha.</p>
+
+        <form>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+            <button class="btn-recuperar" type="submit">Enviar instruções</button>
+        </form>
+
+        <div class="voltar">
+            <span>Já possui uma conta? <a href="login.html">Entrar</a></span>
+        </div>
+    </div>
+
+</body>
+
+</html>

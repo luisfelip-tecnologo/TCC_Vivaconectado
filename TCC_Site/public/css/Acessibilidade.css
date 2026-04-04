@@ -1,0 +1,91 @@
+.contraste-alto {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.contraste-alto a {
+    color: #ffff00 !important;
+}
+
+.contraste-alto h1,
+.contraste-alto h2,
+.contraste-alto h3,
+.contraste-alto h4,
+.contraste-alto h5,
+.contraste-alto h6,
+.contraste-alto p {
+    color: #ffffff !important;
+}
+
+.contraste-alto input,
+.contraste-alto textarea,
+.contraste-alto select,
+.contraste-alto button {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+.contraste-alto .card {
+    background-color: #111 !important;
+    color: #fff !important;
+}
+
+.contraste-alto .btn-jogar,
+.contraste-alto .btn-acess {
+    background-color: #222 !important;
+    color: #ffff00 !important;
+    border: 2px solid #fff;
+}
+
+.contraste-alto .nav {
+    background-color: #111 !important;
+}
+
+.contraste-alto .nav-menu a {
+    color: #ffff00 !important;
+}
+
+
+.contraste-alto .footer {
+    background-color: #111 !important;
+}
+
+.contraste-alto .footer-links a {
+    color: #ffff00 !important;
+}
+
+.contraste-alto .whatsapp-icon,
+.contraste-alto .icon-perfil {
+    color: #ffff00 !important;
+}
+
+.contraste-alto .whatsapp-icon:hover {
+    transform: scale(2.2);
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card,
+.btn-jogar,
+.btn-acess,
+h1, h2, h3, p,
+label,
+.nav-menu a,
+.footer-copy {
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo {
+        font-size: 32px;
+        text-align: center;
+    }
+}

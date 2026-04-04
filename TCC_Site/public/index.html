@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viva Conectado</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/acessibilidade.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <div id="navbar"></div>
+
+    <section class="home-banner">
+        <img src="img/banner.png" alt="Banner Viva Conectado">
+    </section>
+
+    <h2 class="home-titulo">Conteúdos para inclusão digital</h2>
+
+    <main class="home-conteudo">
+        <div class="home-cards">
+            <div class="home-card">
+                <a href="Aprender.html">
+                    <img src="img/Apps_gov.png" alt="Serviços Públicos">
+                    <h3>Serviços Públicos Digitais</h3>
+                    <p>Aprenda a usar aplicativos do governo.</p>
+                </a>
+            </div>
+
+            <div class="home-card">
+                <a href="Aprender.html">
+                    <img src="img/banco.png" alt="Educação Financeira">
+                    <h3>Educação Financeira Digital</h3>
+                    <p>Aprenda a usar aplicativos de banco.</p>
+                </a>
+            </div>
+
+            <div class="home-card">
+                <a href="Aprender.html">
+                    <img src="img/redes.jpg" alt="Redes Sociais">
+                    <h3>Redes Sociais</h3>
+                    <p>Aprenda a usar redes sociais.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <h2 class="home-titulo">Conteúdo educativo em vídeo</h2>
+
+    <main class="home-video">
+        <div class="home-video-card">
+            <h3>Como evitar golpes digitais</h3>
+            <iframe width="100%" height="315"
+                src="https://www.youtube.com/embed/VIDEO_AQUI"
+                allowfullscreen>
+            </iframe>
+            <a href="Aprender.html">
+                <button class="btn-jogar">Acessar mais conteúdos</button>
+            </a>
+        </div>
+    </main>
+
+    <h2 class="home-titulo">Atividades interativas</h2>
+
+    <main class="home-jogos">
+        <div class="home-jogos-cards">
+            <div class="home-jogo-card">
+                <img src="img/jogo_Memoria.png" alt="Jogo da Memória">
+                <h3>Jogo da Memória</h3>
+                <a href="Jogo_Memoria.html">
+                    <button class="btn-jogar">Acessar</button>
+                </a>
+            </div>
+
+            <div class="home-jogo-card">
+                <img src="img/Sudoku.png" alt="Sudoku">
+                <h3>Sudoku</h3>
+                <a href="Sudoku.html">
+                    <button class="btn-jogar">Acessar</button>
+                </a>
+            </div>
+
+            <div class="home-jogo-card">
+                <img src="img/Quebra_cabeça.png" alt="Quebra-Cabeça">
+                <h3>Quebra-Cabeça</h3>
+                <a href="Quebra_cabeça.html">
+                    <button class="btn-jogar">Acessar</button>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <a href="https://wa.me/5518997254892" class="btn-whatsapp" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <div id="footer"></div>
+
+    <script type="module" src="main.js"></script>
+    <script src="Acessibilidade.js"></script> 
+    
+    <script>
+        // Função para carregar os arquivos HTML externos
+        async function carregar(id, arquivo) {
+            try {
+                const response = await fetch(arquivo);
+                if (!response.ok) throw new Error("Erro ao carregar " + arquivo);
+                const html = await response.text();
+                document.getElementById(id).innerHTML = html;
+
+                // Se o Header acabou de ser carregado, precisamos "avisar" o Acessibilidade.js
+                if (id === 'header') {
+                    // Dispara um evento personalizado para o script de acessibilidade reagir
+                    window.dispatchEvent(new Event('componentesCarregados'));
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        }
+    
+        // Iniciar carregamento
+        carregar('header', 'componentes/header.html');
+        carregar('navbar', 'componentes/navbar.html');
+        carregar('footer', 'componentes/footer.html');
+    </script>
+</body>
+</html>

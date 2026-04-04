@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Perfil</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+body {
+    background: #f8fafc;
+    font-family: Arial;
+}
+.perfil-container {
+    max-width: 700px;
+    margin: 140px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+}
+img {
+    width:120px;
+    height:120px;
+    border-radius:50%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="perfil-container">
+    <h2>Meu Perfil</h2>
+
+    <p id="mensagem"></p>
+
+    <img id="preview" src="img/perfis/avatar.png">
+
+    <input type="file" id="foto">
+
+    <label>Nome:</label>
+    <input type="text" id="nome">
+
+    <label>Email:</label>
+    <input type="email" id="email">
+
+    <label>Nova senha:</label>
+    <input type="password" id="senha">
+
+    <button id="salvar">Salvar Alterações</button>
+
+    <div class="voltar">
+        <a href="index.html">← Voltar</a>
+    </div>
+</div>
+
+<script type="module" src="js/perfil.js"></script>
+
+</body>
+</html>
