@@ -1,1 +1,73 @@
+<style>
+    .banner-container {
+        width: 100%;
+        min-height: 250px;
+        background: linear-gradient(135px, #007bff, #00bfff);
+        color: white;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
 
+    .slide {
+        display: none;
+        width: 100%;
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .slide.active {
+        display: block;
+    }
+
+    .slide h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .slide p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<section class="banner-container">
+    <div class="slide active">
+        <h2>Bem-vindo ao Viva Conectado</h2>
+        <p>A tecnologia a favor da sua independência digital.</p>
+    </div>
+    <div class="slide">
+        <h2>Acessibilidade para Todos</h2>
+        <p>Interface adaptada para facilitar sua navegação.</p>
+    </div>
+    <div class="slide">
+        <h2>Aprenda e Conecte-se</h2>
+        <p>Tutoriais simples sobre os principais serviços digitais.</p>
+    </div>
+</section>
+
+<script>
+    (function() {
+        const slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        if (slides.length > 0) {
+            setInterval(() => {
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }, 4000);
+        }
+    })();
+</script>
