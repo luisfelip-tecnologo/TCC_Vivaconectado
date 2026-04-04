@@ -105,25 +105,21 @@
     <script src="Acessibilidade.js"></script> 
     
     <script>
-        // Função para carregar os arquivos HTML externos
         async function carregar(id, arquivo) {
             try {
                 const response = await fetch(arquivo);
                 if (!response.ok) throw new Error("Erro ao carregar " + arquivo);
                 const html = await response.text();
                 document.getElementById(id).innerHTML = html;
-
-                // Se o Header acabou de ser carregado, precisamos "avisar" o Acessibilidade.js
+                
                 if (id === 'header') {
-                    // Dispara um evento personalizado para o script de acessibilidade reagir
                     window.dispatchEvent(new Event('componentesCarregados'));
                 }
             } catch (err) {
                 console.error(err);
             }
         }
-    
-        // Iniciar carregamento
+
         carregar('header', 'componentes/header.html');
         carregar('navbar', 'componentes/navbar.html');
         carregar('footer', 'componentes/footer.html');
