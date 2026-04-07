@@ -1,44 +1,23 @@
 <style>
-    .banner-container {
+.banner-container {
         width: 100%;
-        min-height: 250px;
-        background-color: #004aad !important; 
-        color: #ffffff !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 40px 0;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        min-height: 300px; /* Para ele não ficar "esmagado" */
+        background-color: #333;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px; /* Um tchan no visual */
+        margin: 20px 0;
     }
+
     .slide {
-        display: none;
-        width: 100%;
+        display: none; /* Esconde todos os slides por padrão */
+        text-align: center;
+        padding: 50px;
+        color: white;
     }
 
     .slide.active {
-        display: block;
-        animation: fadeIn 0.5s;
-    }
-
-    .slide h2 {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-        color: white !important;
-    }
-
-    .slide p {
-        font-size: 1.2rem;
-        color: white !important;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+        display: block; /* Mostra só o slide ativo */
     }
 </style>
 
