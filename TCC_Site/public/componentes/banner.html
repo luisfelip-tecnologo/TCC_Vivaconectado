@@ -2,43 +2,43 @@
     .banner-container {
         width: 100%;
         min-height: 250px;
-        background: linear-gradient(135px, #007bff, #00bfff);
-        color: white;
-        position: relative;
-        overflow: hidden;
+        background-color: #004aad !important; 
+        color: #ffffff !important;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 40px 20px;
-        border-radius: 12px;
-        margin: 20px 0;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        padding: 40px 0;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-
     .slide {
         display: none;
         width: 100%;
-        animation: fadeIn 0.8s ease-in-out;
     }
 
     .slide.active {
         display: block;
+        animation: fadeIn 0.5s;
     }
 
     .slide h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: white !important;
     }
 
     .slide p {
-        font-size: 1.1rem;
-        opacity: 0.9;
+        font-size: 1.2rem;
+        color: white !important;
     }
 
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from { opacity: 0; }
+        to { opacity: 1; }
     }
 </style>
 
