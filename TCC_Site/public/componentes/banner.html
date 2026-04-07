@@ -1,38 +1,76 @@
 <style>
-.banner-container {
+    .banner-container {
         width: 100%;
-        min-height: 300px; /* Para ele não ficar "esmagado" */
-        background-color: #333;
+        min-height: 250px;
+        background: linear-gradient(135px, #007bff, #00bfff);
+        color: white;
         position: relative;
         overflow: hidden;
-        border-radius: 10px; /* Um tchan no visual */
-        margin: 20px 0;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-
+        
     .slide {
-        display: none; /* Esconde todos os slides por padrão */
-        text-align: center;
-        padding: 50px;
-        color: white;
+        display: none;
+        width: 100%;
+        animation: fadeIn 0.8s ease-in-out;
     }
 
     .slide.active {
-        display: block; /* Mostra só o slide ativo */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 40px 10%;
+    }
+
+    .slide img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        margin-right: 30px;
+    }
+
+    .slide-texto {
+        flex: 1;
+        text-align: left;
+    }
+
+    .slide-texto h2 {
+        font-size: 2.2rem;
+        margin-bottom: 5px;
+        color: white !important;
+    }
+
+    .slide-texto p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        color: white !important;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 </style>
 
 <section class="banner-container">
     <div class="slide active">
-        <h2>Bem-vindo ao Viva Conectado</h2>
-        <p>A tecnologia a favor da sua independência digital.</p>
+        <img src="img/idosos_notebook.png" alt="Idosos felizes no notebook">
+        <div class="slide-texto">
+            <h2>Bem-vindo ao Viva Conectado</h2>
+            <p>Conectando você ao mundo digital.</p>
+        </div>
     </div>
+    
     <div class="slide">
-        <h2>Acessibilidade para Todos</h2>
-        <p>Interface adaptada para facilitar sua navegação.</p>
-    </div>
-    <div class="slide">
-        <h2>Aprenda e Conecte-se</h2>
-        <p>Tutoriais simples sobre os principais serviços digitais.</p>
+        <img src="img/icones_apps.png" alt="Ícones de redes sociais e bancos">
+        <div class="slide-texto">
+            <h2>Acessibilidade para Todos</h2>
+            <p>Tutoriais simples sobre os principais serviços digitais.</p>
+        </div>
     </div>
 </section>
 
