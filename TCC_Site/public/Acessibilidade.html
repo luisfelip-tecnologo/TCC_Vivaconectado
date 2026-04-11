@@ -99,19 +99,32 @@
 
         </div>
     </main>
-    <footer class="site-footer">
-        <div class="footer-links">
-            <a href="Contato.html">Ajuda</a>
-            <span class="footer-separador">|</span>
-            <a href="Acessibilidade.html">Acessibilidade</a>
-            <span class="footer-separador">|</span>
-            <a href="Sobre.html">Sobre</a>
-        </div>
+    <div id="footer"></div>
 
-        <p class="footer-copy">© 2025 – Viva Conectado</p>
-    </footer>
+    <script type="module" src="main.js"></script>
+    <script src="Acessibilidade.js"></script> 
+    
+    <script>
+        async function carregar(id, arquivo) {
+            try {
+                const response = await fetch(arquivo);
+                if (!response.ok) throw new Error("Erro ao carregar " + arquivo);
+                const html = await response.text();
+                document.getElementById(id).innerHTML = html;
 
-    <script src="Acessibilidade.js"></script>
+                if (id === 'header') {
+
+                    window.dispatchEvent(new Event('componentesCarregados'));
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        carregar('header', 'componentes/header.html');
+        carregar('navbar', 'componentes/navbar.html');
+        carregar('footer', 'componentes/footer.html');
+    </script>
 
 </body>
 </html>
