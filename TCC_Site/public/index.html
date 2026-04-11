@@ -13,16 +13,17 @@
 
 <body>
 
-<div id="header"></div>
-<div id="navbar"></div>
-<div id="banner"></div>   
+    <div id="header"></div>
+    <div id="navbar"></div>
+    <div id="banner"></div>
+
     <h2 class="home-titulo">Conteúdos para inclusão digital</h2>
 
     <main class="home-conteudo">
         <div class="home-cards">
             <div class="home-card">
                 <a href="Aprender.html">
-                    <img src="img/AppsGov.jpeg" alt="Serviços Públicos">
+                    <img src="img/Apps_gov.png" alt="Serviços Públicos">
                     <h3>Serviços Públicos Digitais</h3>
                     <p>Aprenda a usar aplicativos do governo.</p>
                 </a>
@@ -30,7 +31,7 @@
 
             <div class="home-card">
                 <a href="Aprender.html">
-                    <img src="img/bancos.jpeg" alt="Educação Financeira">
+                    <img src="img/banco.png" alt="Educação Financeira">
                     <h3>Educação Financeira Digital</h3>
                     <p>Aprenda a usar aplicativos de banco.</p>
                 </a>
@@ -38,7 +39,7 @@
 
             <div class="home-card">
                 <a href="Aprender.html">
-                    <img src="img/redes.png" alt="Redes Sociais">
+                    <img src="img/redes.jpg" alt="Redes Sociais">
                     <h3>Redes Sociais</h3>
                     <p>Aprenda a usar redes sociais.</p>
                 </a>
@@ -91,7 +92,11 @@
         </div>
     </main>
 
-     <div id="footer"></div>
+    <a href="https://wa.me/5518997254892" class="btn-whatsapp" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <div id="footer"></div>
 
     <script type="module" src="main.js"></script>
     <script src="Acessibilidade.js"></script> 
@@ -103,8 +108,9 @@
                 if (!response.ok) throw new Error("Erro ao carregar " + arquivo);
                 const html = await response.text();
                 document.getElementById(id).innerHTML = html;
-                
+
                 if (id === 'header') {
+
                     window.dispatchEvent(new Event('componentesCarregados'));
                 }
             } catch (err) {
@@ -116,7 +122,6 @@
         carregar('navbar', 'componentes/navbar.html');
         carregar('banner', 'componentes/banner.html');
         carregar('footer', 'componentes/footer.html');
-        
     </script>
 </body>
 </html>
