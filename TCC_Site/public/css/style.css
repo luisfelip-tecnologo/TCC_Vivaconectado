@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #eafffe;
+  background: #f8fafc;
   color: #1f2933;
 }
 
@@ -98,7 +98,7 @@ body {
   height: 40px;
   border-radius: 50%;   /* deixa redonda */
   object-fit: cover;    /* corta a imagem pra caber na bolinha */
-  border: 2px solid #2563eb; 
+  border: 2px solid #2563eb; /* borda azul */
   transition: transform 0.3s;
   cursor: pointer;
 }
@@ -551,9 +551,10 @@ body {
 
 .contraste-alto body {
     background-color: #000000 !important;
-    color: #ffff00 !important;
+    color: #ffff00 !important; /* Amarelo tem o melhor contraste no preto */
 }
 
+/* Forçando os cards a ficarem pretos com bordas amarelas */
 .contraste-alto .home-card, 
 .contraste-alto .home-video-card, 
 .contraste-alto .home-jogo-card,
@@ -566,6 +567,7 @@ body {
     box-shadow: none !important;
 }
 
+/* Corrigindo os textos dentro dos cards que estavam ficando brancos/sumindo */
 .contraste-alto .home-card h3,
 .contraste-alto .home-card p,
 .contraste-alto .home-jogo-card h3,
@@ -576,7 +578,7 @@ body {
 .contraste-alto .sobre-caixa,
 .contraste-alto .lista-acessibilidade p,
 .contraste-alto .lista-acessibilidade li {
-    color: #ffff00 !important;
+    color: #ffff00 !important; /* Amarelo neles! */
 }
 
 /* Ajustando os botões dentro dos cards */
