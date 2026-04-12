@@ -1,28 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('componentesCarregados', () => {
+
     const html = document.documentElement;
+
     const btnAumentar = document.getElementById('aumentar-fonte');
     const btnDiminuir = document.getElementById('diminuir-fonte');
+    const btnContraste = document.getElementById('autocontraste');
 
+    if (!btnAumentar || !btnDiminuir || !btnContraste) return;
 
-    const tamanhoSalvo = localStorage.getItem('tamanhoFonte');
-    if (tamanhoSalvo) {
-        document.documentElement.style.fontSize = tamanhoSalvo + '%';
-    }
+    let tamanhoAtual = localStorage.getItem('tamanhoFonte') 
+        ? parseInt(localStorage.getItem('tamanhoFonte')) 
+        : 100;
 
+    html.style.fontSize = tamanhoAtual + "%";
 
-    document.addEventListener('DOMContentLoaded', () => {
-
-        const btnAumentar = document.getElementById('aumentar-fonte');
-
-    });
-
-    let tamanhoAtual = 100;
-    html.style.fontSize = "100%";
-
-    const atualizarFonte = (novoTamanho) => {
+    function atualizarFonte(novoTamanho) {
         tamanhoAtual = novoTamanho;
-        html.style.fontSize = `${tamanhoAtual}%`;
-    };
+        html.style.fontSize = tamanhoAtual + "%";
+        localStorage.setItem('tamanhoFonte', tamanhoAtual);
+    }
 
     btnAumentar.addEventListener('click', () => {
         if (tamanhoAtual < 150) {
@@ -36,13 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const btnContraste = document.getElementById('autocontraste');
     if (localStorage.getItem('contraste') === 'true') {
         document.body.classList.add('contraste-alto');
     }
 
     btnContraste.addEventListener('click', () => {
         document.body.classList.toggle('contraste-alto');
-        localStorage.setItem('contraste', document.body.classList.contains('contraste-alto'));
+
+        localStorage.setItem(
+            'contraste',
+            document.body.classList.contains('contraste-alto')
+        );
     });
+
 });
