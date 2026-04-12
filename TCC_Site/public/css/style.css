@@ -8,6 +8,7 @@
 @import url("footer.css");
 @import url("button.css");
 @import url("acessibilidade.css");
+@import url("componentes.css");
 /* ===== ESTILOS GERAIS – TODAS AS PÁGINAS ===== */
 * {
   margin: 0;
