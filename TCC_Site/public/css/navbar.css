@@ -1,3 +1,4 @@
+/* ===== MENU PRINCIPAL ===== */
 .site-nav {
   background: #020617;
 }
@@ -11,8 +12,9 @@
 }
 
 .nav-lista a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
+  font-size: 1.0625rem;
   font-weight: 600;
 }
 
