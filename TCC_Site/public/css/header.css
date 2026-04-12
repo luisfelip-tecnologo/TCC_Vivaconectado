@@ -1,1 +1,76 @@
+.site-header {
+  background: #0f172a;
+}
 
+.header-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 90px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.header-logo img {
+  height: 90px;
+  transition: 0.3s;
+}
+
+.header-logo img:hover {
+  transform: scale(1.05);
+}
+
+.header-acessibilidade {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-acessibilidade {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* PERFIL */
+.header-perfil {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.perfil-dropdown {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.perfil-icone {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.dropdown-conteudo {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.perfil-dropdown:hover .dropdown-conteudo {
+  display: block;
+}
