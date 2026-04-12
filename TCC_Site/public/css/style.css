@@ -10,54 +10,6 @@ body {
   background: #f8fafc;
   color: #1f2933;
 }
-/* ===== RODAPÉ – TODAS AS PÁGINAS ===== */
-.site-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #0f172a;
-  padding: 8px 0;
-  text-align: center;
-}
-
-.footer-links a {
-  color: #93c5fd;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.footer-separador {
-  margin: 0 6px;
-  color: #93c5fd;
-}
-
-.footer-copy {
-  font-size: 1rem;
-  margin-top: 4px;
-  color: #e5e7eb;
-}
-
-/* BOTÃO WHATSAPP */
-.btn-whatsapp {
-  position: fixed;
-  bottom: 60px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.btn-whatsapp i {
-  font-size: 3.125rem;
-  color: #25D366;
-  display: inline-block;
-  transition: transform 0.3s;
-}
-
-.btn-whatsapp i:hover {
-  transform: scale(1.2);
-}
 
 /* ===== PÁGINA SOBRE ===== */
 
