@@ -10,6 +10,16 @@ body {
   background: #f8fafc;
   color: #1f2933;
 }
+@import url("header.css");
+@import url("navbar.css");
+@import url("banner.css");
+@import url("home.css");
+@import url("sobre.css");
+@import url("aprender.css");
+@import url("contato.css");
+@import url("footer.css");
+@import url("buttons.css");
+@import url("acessibilidade.css");
 
 /* ===== COMPONENTE DE CONTEÚDO (Sobre / Acessibilidade) ===== */
 .caixa-conteudo {
