@@ -19,30 +19,14 @@
 
 .header-logo img {
   height: 90px;
-  transition: 0.3s;
+  transition: transform 0.3s, filter 0.3s;
 }
 
 .header-logo img:hover {
   transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
-.header-acessibilidade {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.btn-acessibilidade {
-  background: #2563eb;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 8px 14px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* PERFIL */
 .header-perfil {
   display: flex;
   justify-content: flex-end;
@@ -53,13 +37,39 @@
 .perfil-dropdown {
   position: relative;
   display: flex;
+  align-items: center;
   gap: 8px;
   cursor: pointer;
 }
 
-.perfil-icone {
+.perfil-dropdown .perfil-icone {
   font-size: 2rem;
   color: #fff;
+  transition: transform 0.3s;
+}
+
+.perfil-dropdown:hover .perfil-icone {
+  transform: scale(1.2);
+}
+
+.perfil-dropdown .perfil-icone-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2563eb;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.perfil-dropdown .perfil-icone-img:hover {
+  transform: scale(1.1);
+}
+
+.bem-vindo {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
 }
 
 .dropdown-conteudo {
@@ -67,10 +77,43 @@
   position: absolute;
   top: 120%;
   right: 0;
-  background: #fff;
+  background-color: #ffffff;
+  min-width: 150px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   border-radius: 10px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown-conteudo a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.dropdown-conteudo a:hover {
+  background-color: #f0f0f0;
 }
 
 .perfil-dropdown:hover .dropdown-conteudo {
   display: block;
+}
+
+.dropdown-conteudo.fixo {
+  display: block;
+}
+
+.login-icone i,
+.logout-icone i {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.login-icone i:hover,
+.logout-icone i:hover {
+  transform: scale(1.2);
 }
