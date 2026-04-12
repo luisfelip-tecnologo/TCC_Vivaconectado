@@ -1,3 +1,21 @@
+/* ===== BOTÃO WHATSAPP ===== */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.btn-whatsapp i {
+  font-size: 3.125rem;
+  color: #25D366;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.btn-whatsapp i:hover {
+  transform: scale(1.2);
+}
 /* ===== RODAPÉ ===== */
 .site-footer {
   position: fixed;
