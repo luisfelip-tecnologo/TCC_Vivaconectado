@@ -5,7 +5,7 @@
 .header-wrapper {
   max-width: 1300px;
   margin: 0 auto;
-  height: 90px;
+  height: 120px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
