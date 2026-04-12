@@ -1,3 +1,33 @@
+/* BOTÃO PADRÃO */
+.btn {
+  margin-top: 15px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* VARIAÇÕES */
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-dark {
+  background: #0f172a;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #1e293b;
+}
 .btn-jogar {
   margin-top: 15px;
   background: #2563eb;
