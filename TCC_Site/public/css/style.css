@@ -1,14 +1,14 @@
-@import url("header.css");
-@import url("navbar.css");
-@import url("banner.css");
-@import url("home.css");
-@import url("sobre.css");
-@import url("aprender.css");
-@import url("contato.css");
-@import url("footer.css");
-@import url("button.css");
-@import url("acessibilidade.css");
-@import url("componentes.css");
+@import url("css/header.css");
+@import url("css/navbar.css");
+@import url("css/banner.css");
+@import url("css/home.css");
+@import url("css/sobre.css");
+@import url("css/aprender.css");
+@import url("css/contato.css");
+@import url("css/footer.css");
+@import url("css/button.css");
+@import url("css/acessibilidade.css");
+@import url("css/componentes.css");
 /* ===== ESTILOS GERAIS – TODAS AS PÁGINAS ===== */
 * {
   margin: 0;
