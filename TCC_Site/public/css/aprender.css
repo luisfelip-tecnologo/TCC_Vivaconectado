@@ -1,1 +1,16 @@
+.aprender-page {
+  max-width: 1200px;
+  margin: auto;
+}
 
+.aprender-videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.aprender-video-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 15px;
+}
