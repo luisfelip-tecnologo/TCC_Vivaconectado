@@ -1,16 +1,59 @@
+/* ===== PÁGINA APRENDER ===== */
 .aprender-page {
   max-width: 1200px;
   margin: auto;
+  padding: 30px 20px 60px;
 }
 
+/* ===== GRID DE VÍDEOS ===== */
 .aprender-videos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
+/* ===== CARD DE VÍDEO ===== */
 .aprender-video-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 18px;
   padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* EFEITO HOVER */
+.aprender-video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== VÍDEO ===== */
+.aprender-video-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  border: none;
+}
+
+/* ===== TÍTULO ===== */
+.titulo {
+  font-size: 2.5rem;
+  color: #0f172a;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 992px) {
+  .aprender-videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .aprender-videos {
+    grid-template-columns: 1fr;
+  }
 }
