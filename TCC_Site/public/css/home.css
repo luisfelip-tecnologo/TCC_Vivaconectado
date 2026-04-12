@@ -1,9 +1,25 @@
+/* ===== CONTEÚDO PRINCIPAL – HOME ===== */
+.home-conteudo {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px 10px 10px;
+}
+
+.home-conteudo-final {
+  padding: 25px 10px 140px;
+}
+
+/* ===== TÍTULOS ===== */
 .home-titulo {
+  max-width: 1600px;
   margin: 35px auto 20px;
   padding-left: 50px;
   font-size: 2.5rem;
+  color: #0f172a;
+  font-weight: bold;
 }
 
+/* ===== CARDS ===== */
 .home-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -11,14 +27,81 @@
 }
 
 .home-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 16px;
   padding: 28px;
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-card h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 15px;
+}
+
+.home-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+.home-card a {
+  text-decoration: none;
+  color: #0f172a;
 }
 
 .home-card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
+  border-radius: 12px;
+}
+
+.home-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== VÍDEO ===== */
+.home-video {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px 10px;
+}
+
+.home-video-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+}
+
+/* ===== JOGOS ===== */
+.home-jogos {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px 10px 140px;
+}
+
+.home-jogos-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.home-jogo-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+.home-jogo-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
 }
