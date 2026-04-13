@@ -1,25 +1,30 @@
+/* ===== BASE ===== */
 html {
-    font-size: 100%;
+  font-size: 100%; /* 16px padrão */
 }
 
 body {
-    transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* ===== TEXTO BASE ===== */
 p, a, li, span, label, input, textarea, button {
-    font-size: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
+/* ===== HEADINGS ===== */
 h1 { font-size: 2rem; }
 h2 { font-size: 1.75rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.125rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1.05rem; }
 h6 { font-size: 1rem; }
 
+/* ===== CONTRASTE ALTO ===== */
 .contraste-alto {
-    background-color: #000 !important;
-    color: #ffff00 !important;
+  background-color: #000 !important;
+  color: #ffff00 !important;
 }
 
 .contraste-alto h1,
@@ -31,55 +36,103 @@ h6 { font-size: 1rem; }
 .contraste-alto p,
 .contraste-alto li,
 .contraste-alto span {
-    color: #ffff00 !important;
+  color: #ffff00 !important;
 }
 
 .contraste-alto a {
-    color: #00ffff !important;
+  color: #00ffff !important;
 }
 
+/* ===== FORMULÁRIOS ===== */
 .contraste-alto input,
 .contraste-alto textarea,
 .contraste-alto select,
 .contraste-alto button {
-    background-color: #000 !important;
-    color: #ffff00 !important;
-    border: 2px solid #ffff00 !important;
+  background-color: #000 !important;
+  color: #ffff00 !important;
+  border: 0.125rem solid #ffff00 !important;
 }
 
+/* ===== CARDS ===== */
 .contraste-alto .home-card,
 .contraste-alto .home-video-card,
 .contraste-alto .home-jogo-card,
 .contraste-alto .aprender-video-card,
 .contraste-alto .card-video,
 .contraste-alto .caixa-conteudo {
-    background-color: #000 !important;
-    border: 2px solid #ffff00 !important;
-    box-shadow: none !important;
+  background-color: #000 !important;
+  border: 0.125rem solid #ffff00 !important;
+  box-shadow: none !important;
 }
 
+/* ===== HEADER / NAV / FOOTER ===== */
 .contraste-alto .site-header,
 .contraste-alto .site-nav,
 .contraste-alto .site-footer {
-    background-color: #000 !important;
+  background-color: #000 !important;
 }
 
 .contraste-alto .nav-lista a {
-    color: #ffff00 !important;
+  color: #ffff00 !important;
 }
 
+/* ===== BOTÕES ===== */
 .contraste-alto .btn,
 .contraste-alto .btn-jogar,
 .contraste-alto .btn-acessibilidade {
-    background-color: #ffff00 !important;
-    color: #000 !important;
-    border: 2px solid #fff !important;
+  background-color: #ffff00 !important;
+  color: #000 !important;
+  border: 0.125rem solid #fff !important;
 }
 
-.contraste-alto i {
-    color: #ffff00 !important;
-}
-
+/* ===== ÍCONES ===== */
+.contraste-alto i,
 .contraste-alto .btn-whatsapp i {
-    color: #ffff00 !important;
+  color: #ffff00 !important;
+}
+
+/* ================================= */
+/* 📱 RESPONSIVO */
+/* ================================= */
+
+/* Tablet */
+@media (max-width: 62rem) {
+  html {
+    font-size: 95%; /* reduz levemente */
+  }
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.3rem; }
+}
+
+/* Celular */
+@media (max-width: 37.5rem) {
+  html {
+    font-size: 90%; /* escala geral menor */
+  }
+
+  /* textos */
+  p, a, li, span, label, input, textarea, button {
+    font-size: 0.95rem;
+  }
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1.05rem; }
+
+  /* melhora clique */
+  button,
+  .btn,
+  .btn-jogar {
+    padding: 0.6rem 0.9rem;
+  }
+
+  /* inputs mais usáveis */
+  input,
+  textarea,
+  select {
+    padding: 0.5rem;
+  }
 }
