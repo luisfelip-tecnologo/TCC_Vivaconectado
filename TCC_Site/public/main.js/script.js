@@ -1,8 +1,10 @@
-document.addEventListener("DOMContentLoaded", function(){
+window.addEventListener("componentesCarregados", function(){
 
 const iconePerfil = document.getElementById("iconePerfil");
 const menuPerfil = document.getElementById("menuPerfil");
 const btnSair = document.getElementById("btnSair");
+
+if(!iconePerfil) return;
 
 const usuarioLogado = localStorage.getItem("usuarioLogado");
 
@@ -16,6 +18,7 @@ iconePerfil.addEventListener("click", function(){
     menuPerfil.classList.toggle("fixo");
 });
 
+if(btnSair){
 btnSair.addEventListener("click", function(e){
     e.preventDefault();
 
@@ -23,5 +26,6 @@ btnSair.addEventListener("click", function(e){
 
     window.location.href = "Login.html";
 });
+}
 
 });
