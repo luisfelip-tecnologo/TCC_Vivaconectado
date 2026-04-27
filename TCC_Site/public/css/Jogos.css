@@ -1,0 +1,54 @@
+.home-jogos {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 14rem;
+}
+
+.home-jogos-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.home-jogo-card {
+  background: #ffffff;
+  border-radius: 1.6rem;
+  padding: 2.4rem;
+  text-align: center;
+  box-shadow: 0 0.2rem 0.8rem rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-jogo-card:hover {
+  transform: translateY(-0.6rem);
+  box-shadow: 0 1rem 2.2rem rgba(0,0,0,0.18);
+}
+
+.home-jogo-card img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 1.2rem;
+}
+
+.home-jogo-card h3 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  color: #0f172a;
+}
+
+@media (max-width: 62rem) {
+  .home-jogos-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .home-jogos-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .home-jogo-card {
+    padding: 2rem;
+  }
+}
