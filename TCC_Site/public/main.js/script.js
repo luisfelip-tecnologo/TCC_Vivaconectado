@@ -13,7 +13,7 @@ iconePerfil.addEventListener("click", function(){
    if(usuarioLogado){
       menuPerfil.classList.toggle("fixo");
    } else {
-      window.location.href = "Login.html";
+      window.location.href = "login.html";
    }
 
 });
@@ -24,7 +24,7 @@ btnSair.addEventListener("click", function(e){
 
    localStorage.removeItem("usuarioLogado");
 
-   window.location.href="Login.html";
+   window.location.href="login.html";
 });
 }
 
