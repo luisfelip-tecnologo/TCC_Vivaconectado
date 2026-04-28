@@ -6,25 +6,25 @@ const btnSair = document.getElementById("btnSair");
 
 if(!iconePerfil) return;
 
-const usuarioLogado = localStorage.getItem("usuarioLogado");
-
 iconePerfil.addEventListener("click", function(){
 
-    if(!usuarioLogado){
-        window.location.href = "Login.html";
-        return;
-    }
+   const usuarioLogado = localStorage.getItem("usuarioLogado");
 
-    menuPerfil.classList.toggle("fixo");
+   if(usuarioLogado){
+      menuPerfil.classList.toggle("fixo");
+   } else {
+      window.location.href = "Login.html";
+   }
+
 });
 
 if(btnSair){
 btnSair.addEventListener("click", function(e){
-    e.preventDefault();
+   e.preventDefault();
 
-    localStorage.removeItem("usuarioLogado");
+   localStorage.removeItem("usuarioLogado");
 
-    window.location.href = "Login.html";
+   window.location.href="Login.html";
 });
 }
 
